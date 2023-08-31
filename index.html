@@ -4,17 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHero Tube</title>
-    <!-- Daisy ui cdn -->
+    <!-- Daisy Ui CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
       rel="stylesheet"
       type="text/css"
     />
-    <!-- Tailwind cdn -->
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <header></header>
+  <!-- Tailwind custom CSS -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FF1F3D",
+          },
+        },
+      },
+    };
+  </script>
+
+  <body class="font-['Inter']">
+    <header class="2xl:container mx-auto px-5 sm:px-16">
+      <div
+        class="flex flex-col sm:flex-row sm:justify-between items-center pt-10 pb-7 border-b text-lg font-medium gap-4"
+      >
+        <img src="./images/logo.png" alt="logo" />
+        <button class="px-5 py-2 bg-gray-300 rounded">Sort by view</button>
+        <button class="text-white px-5 py-2 bg-primary rounded">Blog</button>
+      </div>
+    </header>
     <main></main>
     <script src="script.js"></script>
   </body>

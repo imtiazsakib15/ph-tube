@@ -5,5 +5,14 @@ const handleTabContainer = async () => {
     "https://openapi.programming-hero.com/api/videos/categories"
   );
   const data = await res.json();
-  console.log(data);
+
+  data.data.forEach((category) => {
+    const tab = `<a class="tab text-base font-medium bg-gray-200 rounded">${category.category}</a>`;
+    const div = document.createElement("div");
+    div.innerHTML = tab;
+    tabContainer.appendChild(div);
+  });
+
+  console.log(data.data);
 };
+handleTabContainer();

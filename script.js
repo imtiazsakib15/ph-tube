@@ -12,7 +12,7 @@ const handleCategory = async (isSortByView) => {
   data.data.forEach((category) => {
     const tab = `<a id="category_${category.category_id}" onclick="displayData(
       ${category.category_id}
-    )" class="text-base font-medium bg-gray-200 rounded active:bg-primary active:text-white px-5 py-2 cursor-pointer">${category.category}</a>`;
+    )" class="text-base font-medium bg-gray-200 active rounded active:bg-primary active:text-white px-5 py-2 cursor-pointer">${category.category}</a>`;
 
     const div = document.createElement("div");
     div.innerHTML = tab;
@@ -95,4 +95,6 @@ const handleSortByView = () => {
 };
 
 handleCategory();
-
+console.log(categoryId);
+const a = document.getElementById(`category_${categoryId}`);
+console.log(a);

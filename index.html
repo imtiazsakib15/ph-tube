@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,10 +45,17 @@
           >Blog</a
         >
       </div>
+    </header>
+    <main class="2xl:container mx-auto px-5 sm:px-16">
       <!-- Tab -->
       <div id="tab-container" class="tabs justify-center gap-6 mt-8"></div>
-    </header>
-    <main></main>
+
+      <!-- Cards -->
+      <div
+        id="card-container"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-10"
+      ></div>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>

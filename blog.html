@@ -48,57 +48,84 @@
     <main class="2xl:container mx-auto px-8 sm:px-16">
       <div class="mt-16 text-blue-600 space-y-2">
         <a class="block" href="#var-let-const"
-          >1. Discuss the scope of var, let, and const</a
+          >1.
+          <span class="hover:underline"
+            >Discuss the scope of var, let, and const</span
+          ></a
         >
         <a class="block" href="#null-and-undefined"
-          >2. Tell us the use cases of null and undefined</a
+          >2.
+          <span class="hover:underline"
+            >Tell us the use cases of null and undefined</span
+          ></a
         >
-        <a class="block" href="#rest-api">3. What do you mean by REST API?</a>
+        <a class="block" href="#rest-api"
+          >3.
+          <span class="hover:underline">What do you mean by REST API?</span></a
+        >
       </div>
       <div class="mt-16 sm:mt-24 mb-36 space-y-14">
         <div>
           <h2 id="var-let-const" class="text-2xl sm:text-4xl font-bold">
             Discuss the scope of var, let, and const
           </h2>
-          <p class="mt-4 text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
-            aut, amet magni repellendus laborum est laudantium, molestiae
-            impedit dolorum, perferendis enim facilis? Praesentium corporis
-            maxime id doloribus provident enim quia eligendi! Similique quas
-            quos necessitatibus ipsum perferendis vero sunt architecto
-            temporibus nemo illum nihil aliquam beatae odio consequuntur, unde
-            nisi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-            natus nihil, consectetur ipsa dolorem corporis minus fuga amet
-            eveniet nesciunt?
-          </p>
+          <div class="lg:text-lg mt-5 text-justify space-y-2">
+            <p>
+              var, let and const are JavaScript keywords which are used for
+              declaring variables. These have different types of scope.
+            </p>
+            <p>
+              var is function scoped. That means if we declare a variable inside
+              a function, the variable can only be accessible in that function.
+              It is not accessible outside the function. Trying to access it
+              from outside the function will cause an error. But if we declare a
+              variable inside a block using var, it will be accessible outside
+              the block also.
+            </p>
+            <p>
+              let is block scoped. That means if we declare a variable inside a
+              block using let, it can only be accessible inside that block.
+              Trying to access from outside the block will cause an error.
+            </p>
+            <p>const is also block scoped. It behaves the same as let.</p>
+          </div>
         </div>
         <div>
           <h2 id="null-and-undefined" class="text-2xl sm:text-4xl font-bold">
             Tell us the use cases of null and undefined
           </h2>
-          <p class="mt-4 text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
-            aut, amet magni repellendus laborum est laudantium, molestiae
-            impedit dolorum, perferendis enim facilis? Praesentium corporis
-            maxime id doloribus provident enim quia eligendi! Similique quas
-            quos necessitatibus ipsum perferendis vero sunt architecto
-            temporibus nemo illum nihil aliquam beatae odio consequuntur, unde
-            nisi?
-          </p>
+          <div class="lg:text-lg mt-5 text-justify space-y-2">
+            <p>
+              null means empty value. Sometimes some value may cause an
+              unexpected behavior, then we reassign null for that. The type of
+              null is 'object'.
+            </p>
+            <p>
+              undefined means the value is not available. If we initialize a
+              variable but didn't assign any value, then the value of the
+              variable is undefined. If we didn't return any value from a
+              function, then the value of that function is undefined. When any
+              property does not exist in an object, the property value is
+              undefined. The type of undefined is 'undefined'.
+            </p>
+          </div>
         </div>
         <div>
           <h2 id="rest-api" class="text-2xl sm:text-4xl font-bold">
             What do you mean by REST API?
           </h2>
-          <p class="mt-4 text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
-            aut, amet magni repellendus laborum est laudantium, molestiae
-            impedit dolorum, perferendis enim facilis? Praesentium corporis
-            maxime id doloribus provident enim quia eligendi! Similique quas
-            quos necessitatibus ipsum perferendis vero sunt architecto
-            temporibus nemo illum nihil aliquam beatae odio consequuntur, unde
-            nisi?
-          </p>
+          <div class="lg:text-lg mt-5 text-justify space-y-2">
+            <p>
+              REST means Representational State Transfer. API means Application
+              Programming Interface. It is a stateless API. It is simple,
+              scalable and compatible with http.
+            </p>
+            <p>
+              It supports CRUD operation i.e. create, read, update and delete.
+              Some methods are used for these operations such as get, post, put,
+              delete etc.
+            </p>
+          </div>
         </div>
       </div>
     </main>

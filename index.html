@@ -34,7 +34,7 @@
   </script>
 
   <body class="font-['Inter']">
-    <header class="2xl:container mx-auto px-5 sm:px-16">
+    <header class="2xl:container mx-auto px-8 sm:px-16">
       <!-- Navbar -->
       <div
         class="flex flex-col sm:flex-row sm:justify-between items-center pt-10 pb-7 border-b text-lg font-medium gap-4"
@@ -46,15 +46,24 @@
         >
       </div>
     </header>
-    <main class="2xl:container mx-auto px-5 sm:px-16">
+    <main class="2xl:container mx-auto px-8 sm:px-16">
       <!-- Tab -->
       <div id="tab-container" class="tabs justify-center gap-6 mt-8"></div>
 
       <!-- Cards -->
       <div
         id="card-container"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-10"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10"
       ></div>
+      <!-- No Content -->
+      <div id="no-content" class="hidden">
+        <img class="mx-auto" src="./images/icon.png" alt="icon" />
+        <h2
+          class="text-3xl font-bold leading-snug max-w-md mx-auto text-center mt-8"
+        >
+          Oops!! Sorry, There is no content here
+        </h2>
+      </div>
     </main>
     <script src="script.js"></script>
   </body>

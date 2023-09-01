@@ -8,19 +8,15 @@ const handleTabContainer = async () => {
   const tabContainer = document.getElementById("tab-container");
 
   data.data.forEach((category) => {
-    const tab = `<a onclick="${displayData(
-      category.category_id
-    )}" class="text-base font-medium bg-gray-200 rounded active:bg-primary active:text-white px-5 py-2 cursor-pointer">${
-      category.category
-    }</a>`;
+    const tab = `<a onclick="displayData(
+      ${category.category_id}
+    )" class="text-base font-medium bg-gray-200 rounded active:bg-primary active:text-white px-5 py-2 cursor-pointer">${category.category}</a>`;
 
     const div = document.createElement("div");
     div.innerHTML = tab;
     tabContainer.appendChild(div);
   });
   displayData(data.data[0].category_id);
-
-  // console.log(data.data[0].category_id);
 };
 
 async function displayData(id) {
@@ -28,12 +24,10 @@ async function displayData(id) {
     `https://openapi.programming-hero.com/api/videos/category/${id}`
   );
   const data = await res.json();
-  console.log(data.data);
   const cardContainer = document.getElementById("card-container");
-  // cardContainer.innerHTML = "";
+  cardContainer.innerHTML = "";
 
   data.data.forEach((category) => {
-    // console.log(category);
     const sec = category?.others?.posted_date;
     const hrs = Math.floor(sec / (60 * 60));
     const min = Math.floor((sec - hrs * 60 * 60) / 60);
@@ -75,8 +69,6 @@ async function displayData(id) {
     div.innerHTML = card;
     cardContainer.appendChild(div);
   });
-
-  console.log(data.data);
 }
 
 handleTabContainer();

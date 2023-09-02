@@ -95,6 +95,3 @@ const handleSortByView = () => {
 };
 
 handleCategory();
-// console.log(categoryId);
-// const a = document.getElementById(`category_${categoryId}`);
-// console.log(a);

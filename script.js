@@ -10,9 +10,9 @@ const handleCategory = async (isSortByView) => {
   tabContainer.innerHTML = "";
 
   data.data.forEach((category) => {
-    const tab = `<a id="category_${category.category_id}" onclick="displayData(
+    const tab = `<button id="category_${category.category_id}" onclick="displayData(
       ${category.category_id}
-    )" class="text-base font-medium bg-gray-200 active rounded active:bg-primary active:text-white px-5 py-2 cursor-pointer">${category.category}</a>`;
+    )" class="text-base font-medium bg-gray-200 rounded focus:bg-primary focus:text-white px-5 py-2 cursor-pointer">${category.category}</button>`;
 
     const div = document.createElement("div");
     div.innerHTML = tab;
